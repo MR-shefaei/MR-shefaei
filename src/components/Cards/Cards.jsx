@@ -21,7 +21,7 @@ const Cards = ({data : {confirmed,deaths,recovered,lastUpdate}}) => {
                 </Grid>
                 <Grid item component = {Card}   xm={3} className={cx(styles.card , styles.recovered)}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterbottom>Recovered</Typography>
+                        <Typography color="textSecondary" gutterbottom ="true">Recovered</Typography>
                         <Typography varaint="h5"><CountUp start={0} end={recovered.value} duration={2.5} separator=","/></Typography>
                         <Typography color = "textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                         <Typography varinat = "body2">Numober of recoveries from  COVID-19</Typography>
@@ -29,7 +29,7 @@ const Cards = ({data : {confirmed,deaths,recovered,lastUpdate}}) => {
                 </Grid>
                 <Grid item component = {Card}  xm={3} className={cx(styles.card , styles.deaths)}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterbottom>Deaths</Typography>
+                        <Typography color="textSecondary" gutterbottom = "true">Deaths</Typography>
                         <Typography varaint="h5"><CountUp start={0} end={deaths.value} duration={2.5} separator=","/></Typography>
                         <Typography color = "textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                         <Typography varinat = "body2">Numober of deaths caused  by COVID-19</Typography>
